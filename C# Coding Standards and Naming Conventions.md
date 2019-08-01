@@ -414,6 +414,32 @@ public class BarcodeReadException : System.Exception
 
 ***Why: consistent with the Microsoft's .NET Framework and easy to read.***
 
+#### 26. Do use boolean properties with prefixes Is and Has. "Is" should be used when decribing state of an entity or property and "Has" should be used when describing a process
+
+```csharp 
+// Correct
+public bool HasValues() 
+{
+}
+
+public bool HasRecentDeliveryCompleted()
+{
+
+}
+
+public bool IsActiveCustomer {get;set;}
+
+public bool IsEnabled {get;set;)
+
+//Avoid
+public bool active;
+public bool activeFlag;
+public bool isPasswordExpired;
+```
+
+***Why: consistent with the Microsoft's .NET Framework and easy to read.***
+
+
 ## Offical Reference
 
 1. [MSDN General Naming Conventions](http://msdn.microsoft.com/en-us/library/ms229045(v=vs.110).aspx)
